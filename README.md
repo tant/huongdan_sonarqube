@@ -35,6 +35,6 @@ Lệnh sonarqube gợi ý lúc tạo project:
 
 sonar-scanner.bat -D"sonar.projectKey=test" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login="[thay bằng token của project]"
 
-Lệnh anh đã chạy
+Lệnh anh đã chạy, chạy ở thư mục chứa code 
 
-docker run --rm  --network=sonarqube_default -e SONAR_HOST_URL="http://[thay bằng ip:9000" -e SONAR_LOGIN="[thay bằng token của project]"  -v "%cd%:/usr/src" sonarsource/sonar-scanner-cli
+docker run --rm  --network=sonarqube_default -e SONAR_HOST_URL="http://[thay bằng ip]:9000" -e SONAR_LOGIN="[thay bằng token của project]"  -v "%cd%:/usr/src" sonarsource/sonar-scanner-cli
